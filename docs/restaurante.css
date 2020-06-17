@@ -1,0 +1,60 @@
+body{
+    background-color: #FFFFFF;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%234d2929' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+header{
+    background-color:rgb(224,188,175);
+    margin:20px;
+    padding: 10px;
+}
+h1{
+    font-size:25;
+    color:#FF617B;
+    text-align: center;
+}
+a {
+    color:#FF617B;
+}
+:focus{
+    color:#CC3E16;
+}
+#presentacion{
+    background-color:#C7846B;
+    margin:20px;
+    padding:10px;
+    }
+.services{
+    background-color:rgba(204,159,141,0.4);
+    margin:20px;
+    padding:10px;
+    color:#822C0A;
+}
+#menuBrunch{
+    background-image:url(./assets/comida.jpg);
+    background-size:cover;
+    background-position:center;
+    background-origin:padding-box;
+}
+.content{
+    background-color:rgba(255, 255, 255, 0.8);
+    padding:5px;
+}
+#contacto{
+    background-image:url(./assets/barra.jpg);
+    background-size:contain;
+    background-origin:border-box;
+    background-attachment: scroll;
+}
+a[href="https://www.facebook.com/"]{
+    font-size:20px;
+    color:blue;
+
+}
+a[href^="#"]{
+    color:red;
+    font-size:29px;
+}
+a[title~="Correo"]{
+    color:yellow;
+    font-size:35px;
+}
