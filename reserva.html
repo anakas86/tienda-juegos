@@ -2,10 +2,10 @@
 <html lang="es">
     <head>
         <title>Reservas Cafetería</title>
-        <meta charset="utf8"/>
+        <meta charset="utf-8"/>
         <meta name="author" content="Ana Castillo"/>
-        <meta name="description" content="galería"/>
-        <meta name="keywords" content="flexbox" />
+        <meta name="description" content="reserva mesa en la cafeteria de la tienda"/>
+        <meta name="keywords" content="reserva, comer, jugar, cafeteria/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
         <meta name="robots" content="index,follow"/>
         <link href="css/reserva.css" rel="stylesheet" type="text/css"/>
@@ -54,11 +54,11 @@
                         <label for="Name">Nombre</label>
                         <input type="text" id="Name" name="Name" required/>
                         <label for="lastname">Apellido</label>
-                        <input type="text" id="lastname"  name="lastname" requiered/>
+                        <input type="text" id="lastname"  name="lastname" required/>
                         <label for="email">Corre Electrónico</label>
                         <input type="email" name="email" id="email" required/>
                         <label for="phone">Teléfono</label>
-                        <input type="phone" name="phone" id="phone"/>
+                        <input type="number" name="phone" id="phone"/>
                 </fieldset>
                 <fieldset class="reservation-data">
                     <legend>Datos de tu reserva</legend>
@@ -86,7 +86,7 @@
                 <input class="checkbox" type="checkbox" id="tyc" name="tyc" value="terminosycondiciones" required/>
                 <label for="tyc">Acepto los términos y condiciones</label>
                 <input type="submit" value="Enviar"/>
-                <input type="reset"/>
+                <input type="reset"/>              
             </form>
         </main>
         <footer>

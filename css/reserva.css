@@ -37,7 +37,7 @@ label{
     font-weight: bold;
 }
 .personal-information input{
-    width: 80%;
+    width: 98%;
 }
 p{
     font-size: 1.1em;
@@ -51,6 +51,10 @@ p{
     display: inline-block;
     margin-right: 0.7em;
 }
+.finalizar{
+    display: flex;
+    justify-content: flex-end;
+}
 .checkbox{
     display: inline-block;
 }
@@ -59,7 +63,9 @@ p{
 }
 input[type="reset"], input[type="submit"]{
     width: 25%;
+    border-radius: 40px;
     background-color: coral;
+    color:white;
     -webkit-appearance: none;
     border: 0;
     box-shadow: 1px 1px 3px grey;

@@ -45,10 +45,11 @@ p:read-write{
     background-color:  rgb(244, 191, 166);
 }
 input[type="submit"]{
-    width: 25%;
     background-color: coral;
     -webkit-appearance: none;
     border: 0;
+    padding: 2em;
+    border-radius: 40px;
     box-shadow: 1px 1px 3px grey;
     display: inline-block;
     margin: 1em 3em;
