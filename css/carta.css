@@ -1,0 +1,59 @@
+@import url('main.css');
+* {
+    box-sizing: border-box;
+}
+.carta{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    width: 100%;
+    gap:10px;
+    padding: 1.5em;
+}
+.menu{
+    background-color: #eac6b9;
+    box-shadow: 1px 1px 5px gray;
+    display: flex;
+}
+.menu img{
+    display: block;
+    height: auto;
+    width: 100%;
+}
+.content-menu{
+    padding: 1em;
+    width: 100%;
+} 
+.content-menu h2{
+    text-align: center;
+}
+.content-menu ul{
+    padding: 0;
+}
+.content-menu li{
+    margin:0;
+    list-style-type: none;
+    line-height: 1.8;
+}
+.content-menu p{
+    text-align: right;
+    font-weight: bold;
+    margin:1em;
+}
+@media all and (min-width: 1200px){
+    .menu img{
+        height: 100%;
+        object-fit: cover;
+    }
+}
+@media all and (max-width: 1040px){
+    .carta{
+        grid-template-rows: repeat(3, minmax(400px, 1fr));
+    }
+    .menu{
+        flex-wrap: wrap;
+    }
+    .menu li{
+        margin:1em;
+    }
+}
+

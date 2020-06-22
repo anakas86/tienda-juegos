@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;800&display=swap');
+
+html{
+    height: 100%;
+}
+body{
+    background-color: #f0f0f0;
+    margin:0;
+    font-family: 'Raleway', sans-serif;
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+header{
+    background-color: coral;
+    width: 100%;
+    box-shadow: 2px 2px 5px rgb(167, 166, 166);
+    position:relative;
+
+}
+.container-navigation{
+    margin:0 auto;
+    max-width: 1600px;
+}
+.site-navigation .logo{
+    display: flex;
+    text-decoration: none;
+    color:inherit;
+}
+.site-navigation .logo h1{
+    font-size: 50px;
+    text-shadow: 1px 2px 2.5px rgb(96, 93, 93);
+}
+.site-navigation .logo img{
+    max-width: 100px;
+    margin:20px;
+}  
+.site-navigation{
+    background-color: coral;
+    color:#ffffff;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:20px;
+}
+.menu-input-main, .menu-label-main, 
+.menu-input-desplegable, .menu-label-desplegable {
+    display:none;
+}
+.site-navigation ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+.site-navigation li{
+    display:inline-block;
+}
+.site-navigation ul a{
+    display:block;
+    text-decoration: none;
+    color:inherit;
+    padding:20px;
+    font-size: 1.2rem;
+    border-bottom: 2px solid transparent;
+    position: relative;
+}
+.site-navigation ul a::after{
+    content:"";
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    opacity: 0;
+    transform: scale(0);
+    transition: 1.1s ease;
+}
+.site-navigation ul a:hover::after{
+    opacity:1;
+    transform: scale(1);
+}
+.site-navigation .desplegable{
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    height: 0;
+    background-color: coral;
+    z-index: 1;
+    overflow: hidden;
+    opacity:0;
+    transition: all 0.4s ease-in-out;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0 auto;
+    max-width: 1600px;
+}
+footer{
+    background-color: coral;
+}
+.footer-main{
+    background-color: coral;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    margin:0 auto;
+    max-width: 800px;
+}
+.footer-main a{
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    margin:0.3em;
+}
+
+@media all and (min-width: 701px){
+    .site-navigation li:hover .desplegable{
+        opacity: 1;
+        height: auto;
+    }
+}
+
+@media all and (max-width: 1250px) {
+    .site-navigation {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+    }
+}
+
+@media all and (max-width: 700px) {
+    .site-navigation{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    .site-navigation .logo h1{
+        font-size: 30px;
+    }
+    .site-navigation .logo img{
+        max-width: 60px;
+        margin:10px;
+    }
+    .menu-label-main{
+        background-image: url(./../svg/menu-mobile.svg);
+        background-size: cover;
+        display: block;
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        left: 40px;
+        top:40px;
+    }
+    .menu-mobile{
+        display: none;
+        height: 0;
+    }
+    .menu-input-main:checked ~ .menu-label-main{
+        background-image: url(./../svg/cerrar-mobile.svg);
+    }
+    .menu-input-main:checked ~ .menu-mobile{
+        display:flex;
+        flex-direction: column;
+        position: relative;
+        height: auto;
+        opacity: 1;
+        margin:10px;
+        align-self: flex-start;
+    }
+    .abrir-menu{
+        position: relative;
+    }
+    .menu-label-desplegable{
+        background-image: url(./../svg/flecha-hacia-abajo.svg);
+        background-size: cover;
+        display: block;
+        height: 15px;
+        width: 15px;
+        position: absolute;
+        right: 0;
+        top:25px;
+    }
+    .menu-input-desplegable:checked ~ .desplegable{
+        position: static;
+        opacity: 1;
+        height: auto;
+    }
+    .menu-input-desplegable:checked~.menu-label-desplegable{
+        background-image: url(./../svg/flecha-hacia-arriba.svg);
+    }
+}
+@media all and (max-width: 400px) {
+    .menu-label-main{
+        position: static;
+    }
+    .site-navigation .logo img{
+        max-width: 50px;
+    }
+}

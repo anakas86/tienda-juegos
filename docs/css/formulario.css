@@ -1,0 +1,55 @@
+@import url('main.css');
+
+.container{
+    margin:1em;
+    display:block
+}
+
+h2{
+    text-decoration: underline;
+    font-size: 30px;
+    text-align: center;
+}
+.formulario-contacto{
+    margin: 0 auto;
+    width: 80%;
+}
+input{
+    margin-bottom: 1.2em;
+}
+:enabled{
+    background-color:#e2b7b7 ;
+    border-color:#dcd0cc;
+}
+:disabled{
+    background-color: rgb(201, 192, 192);
+    width: 80%;
+}
+input:not(.politica):checked +label{
+    text-decoration: underline;
+    color:coral;
+}
+input:indeterminate +label{
+    font-style: italic;
+}
+input:default +label{
+    color:red;
+}
+:required{
+    border-color: coral;
+}
+input:read-only{
+    cursor:not-allowed;
+}
+p:read-write{
+    background-color:  rgb(244, 191, 166);
+}
+input[type="submit"]{
+    width: 25%;
+    background-color: coral;
+    -webkit-appearance: none;
+    border: 0;
+    box-shadow: 1px 1px 3px grey;
+    display: inline-block;
+    margin: 1em 3em;
+}

@@ -1,0 +1,72 @@
+@import url('main.css');
+h2{
+    text-align: center;
+    margin: 1.3em;
+    align-self: center;
+    text-shadow:1px 1px 3px rgb(177, 173, 173);
+}
+ol{
+    margin: 0 2em;
+}
+li{
+    font-size: 1.1em;
+    font-weight: bold;
+}
+li>h3::before,
+li>h3::after{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+li>h3::before{
+    content:"\201C";
+}
+li>h3::after{
+    content:"\201D";
+}
+li>p{
+    font-size: 0.9em;
+    font-weight: normal;
+    line-height: 1.5;
+}
+li>p::first-letter{
+    color:coral;
+    font-size:2em;
+}
+li>iframe{
+    width: 50%;
+    min-width: 350px;
+    height: 300px;
+    min-height: 100px;
+}
+li>img{
+    display: block;
+    width: 50%;
+    min-width: 300px;
+    height: auto;
+    min-height: 100px;
+    border: 5px double coral;
+}
+.tabla{
+    width: 100%;
+    padding:1.2em;
+}
+table{
+    border: 1px solid black;
+    margin:0 auto;
+    width: 60%;
+}
+table caption{
+    background-color: rgb(250, 169, 139);
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 1em;
+}
+table th,
+table td{
+    border: 1px solid black;
+    padding: 1em 1.5em;
+}
+table th{
+    background-color: rgb(238, 213, 204);
+    color:coral;
+}

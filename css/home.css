@@ -1,0 +1,309 @@
+@import url('main.css');
+
+.box{
+    z-index: 1;    
+    /*pointer-events: none;*/
+}
+.box::before,
+.box::after{
+    content:"";
+    background-image: url(./../img/puerta-ext.jpg);
+    background-size: 200% auto;
+    position:fixed;
+    top:0;
+    bottom:0;
+    opacity:1;
+    width: 50%;
+}
+.box::before{
+    background-position: 0;
+    left:0;
+    animation: introductionleft 3s ease-in-out forwards;
+}
+.box::after{
+    background-position: 100%;
+    right:0;
+    animation: introductionright 3s ease-in-out forwards;
+}
+
+@keyframes introductionleft{
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    25%{
+        opacity:0.8;
+    }
+    50%{
+        opacity:0.5;
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-600px);
+        display:none;
+    }
+}
+
+@keyframes introductionright{
+        0% {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+        25%{
+            opacity:0.8;
+        }
+        50%{
+            opacity:0.5;
+        }
+        100% {
+            opacity: 0;
+            transform: translateX(600px);
+            display:none;
+        }
+    }
+
+.home{
+    margin:1em auto;
+    display: grid;
+    grid-template-rows: auto 400px auto;
+    grid-template-columns: 50%;
+    grid-template-areas: 
+    "presentation presentation"
+    "section1 section2"
+    "opinion opinion";
+    gap:1em;
+}
+.home a{
+    text-decoration: none;
+    color:white;
+}
+.section{
+    min-height: 100vh;
+}
+
+.presentation{
+    grid-area: presentation;
+    background-color: #ece6dd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:3em;
+    text-align:center;
+}
+
+.presentation h2{
+    font-size: 10vh;
+    margin:0;
+    padding: 1em;
+}
+.presentation p{
+    font-size: 5vh;
+    padding:1em;
+}
+
+.presentation button{
+    -webkit-appearance: none;
+    color: coral;
+    font-size: 3vh;
+    border:0;
+    background-color: #ece6dd;
+}
+.presentation button::before,
+.presentation button::after {
+    opacity: 0;
+    position: relative;
+    transform: scale(1.5);
+    transition: all 0.5s ease;
+}
+.presentation button::before {
+    content:'→';
+    left: -20px;
+}
+.presentation button::after {
+    content: '←';
+    right: -20px;
+}
+.presentation button:hover::before,
+.presentation button:hover::after {
+    opacity: 1;
+    transform:scale(1)
+}
+.presentation button:hover::before{
+    left: -5px;
+}
+.presentation button:hover::after{
+    right: -5px;
+}
+.presentation a{
+    text-decoration: none;
+}
+.presentation a:visited{
+    color:coral;
+}
+.one,
+.two{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+.one{
+    grid-area: section1;
+}
+.two{
+    grid-area:section2;
+}
+.one img,
+.two img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    filter: hue-rotate(-16deg);
+    transition: all 1s ease;
+}
+.two img{
+    height: auto;
+}
+
+.one h3,
+.two h3{
+    color: white;
+    font-size: 3vh;
+    background-color: coral;
+    padding: 0.8em 2em;
+    text-shadow: 1px 1px 3px rgb(58, 58, 58);
+
+}
+
+.opinion{
+    grid-area: opinion;
+    background-image: url("./../img/interior.jpg");
+    background-color: #ffffff91;
+    background-blend-mode: soft-light;
+}
+
+.opinion h3{
+    font-size: 8vh;
+    margin:0;
+    padding:2em;
+    text-align: center;
+    text-shadow: 1px 1px 3px white;
+}
+.quotes{
+    display: grid;
+    min-height: 500px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    justify-items: center;
+}
+.quote{
+    font-size: 2.3vh;
+    background-color: #ece6dd;
+    padding: 2em;
+    position: relative;
+    height: fit-content;
+    width: 200px;
+    border-radius: 20% 0 20% 20%;
+    box-shadow: 2px 2px 5px grey;
+}
+.quote:nth-of-type(4){
+    border-radius: 20%;
+}
+.estilo1::after{
+    content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    right:0;
+    top: -30px;
+    border-bottom: 30px solid #ece6dd;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+}
+
+.estilo2::before{
+    content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-bottom: 60px solid transparent;
+    border-left: 60px solid transparent;
+    border-right: 60px solid #e8825c;
+}
+
+.estilo3::after{
+    background-color: #ece6dd;
+    border-radius: 43%;
+    content: '';
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -35px;
+    left: 254px;
+}
+.estilo3::before{
+    background-color: #ece6dd;
+    border-radius: 43%;
+    content: '';
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: -58px;
+    left: 303px;
+}
+@media all and (min-width: 701px){
+    .one:hover img,
+    .two:hover img{
+        transform: scale(1.3,1.3);
+    }
+}
+@media all and (max-width: 700px) {
+    .box{
+        display: none;
+    }
+    .home{
+        display: grid;
+        grid-template-rows: auto auto auto 1fr;
+        grid-template-columns: auto;
+        grid-template-areas:
+            "presentation"
+            "section1"
+            "section2"
+            "opinion";
+    }
+    .section{
+        min-height: auto;
+    }
+    .presentation h2{
+        font-size:6vh;
+    }
+    .presentation p{
+        display:none;
+    }
+    .one img{
+        height: auto;
+    }
+    .opinion h3{
+        font-size: 4vh;
+    }
+    .quote{
+        font-size: 1.8vh;
+        width: 150px;
+        margin-bottom: 2em;
+    }
+}
+@media all and (max-width: 400px) {
+    .estilo3::after,
+    .estilo3::before{
+        display: none;
+    }
+    .quotes{
+        display: block;
+    }
+}

@@ -1,0 +1,46 @@
+@import url('main.css');
+
+.faqs{
+    overflow: hidden;
+    list-style-type: none;
+    margin:1em;
+    padding:0;
+}
+.faqs li{
+    position: relative;
+    border-bottom: 1px solid rgb(184, 183, 183);
+    width: 80%;
+
+}
+.menu-input{
+    display:none;
+}
+
+.menu-label{
+    background-image: url(./../svg/mas.svg);
+    background-size: cover;
+    display: block;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: 100%;
+}
+.menu-input:checked ~ .menu-label{
+    background-image: url(./../svg/menos.svg);
+}
+
+.answer{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 1s ease;
+    line-height: 1.7;
+}
+
+.menu-input:checked ~ .answer {
+    height: auto;
+    opacity: 1;
+}

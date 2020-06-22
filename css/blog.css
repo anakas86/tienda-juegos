@@ -1,0 +1,47 @@
+@import url('main.css');
+
+.blog{
+    display:grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(3, auto);
+    background-color: white;
+    padding: 1.3em;
+    gap: 10px;
+}    
+.main-article{
+    grid-column: 1/4;
+    padding: 1em;
+    border: 0.5px solid coral;
+}
+.main-article h2{
+    font-size: 1.5em;
+}
+.main-article img{
+    width: 100%;
+    height: auto;
+}
+.main-article p{
+    line-height: 1.8;
+}
+.blog article:last-of-type{
+    grid-column: 4;
+    grid-row: 1/2;
+    padding: 1em;
+    background-color: rgb(250, 196, 176);
+}
+.blog article:last-of-type h2{
+    font-size: 1.3em;
+}
+.blog article:last-of-type p{
+    font-size: 0.9em;
+}
+.blog article:nth-of-type(3){
+    grid-column: 2/4;
+}
+.complementario{
+    padding: 1.3em;
+}
+.complementario h2{
+    border-bottom: 1px solid coral;
+    padding-bottom: 0.3em;
+}

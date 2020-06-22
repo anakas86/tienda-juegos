@@ -1,0 +1,76 @@
+@import url('main.css');
+
+.container{
+    margin:1em;
+    display:block
+}
+h2{
+    text-align: center;
+    font-size: 2em;
+}
+h3{
+    margin:2em;
+}
+.formulario-reserva{
+    margin: 0 auto;
+    width: 80%;
+}
+label, input, textarea{
+    display: block;
+}
+input, textarea{
+    padding: 0.4em;
+}
+legend{
+    text-align: center;
+}
+input[type="radio"] {
+    display: inline-block;
+    width: auto;
+}
+input[type="radio"] + label {
+    display: inline-block;
+    width: auto;
+}
+label{
+    margin: 0.5em 0;
+    font-weight: bold;
+}
+.personal-information input{
+    width: 80%;
+}
+p{
+    font-size: 1.1em;
+    font-weight: bold;
+}
+.reservation-data textarea{
+    height: 100px;
+    width: 50%;
+}
+.account input, .account label{
+    display: inline-block;
+    margin-right: 0.7em;
+}
+.checkbox{
+    display: inline-block;
+}
+.checkbox + label{
+    display: inline-block;
+}
+input[type="reset"], input[type="submit"]{
+    width: 25%;
+    background-color: coral;
+    -webkit-appearance: none;
+    border: 0;
+    box-shadow: 1px 1px 3px grey;
+    display: inline-block;
+    margin: 1em 3em;
+}
+@media all and (max-width: 400px) {
+    h3{
+        display: none;
+    }
+    input[type="reset"], input[type="submit"]{
+        width: 30%;
+    }
+}

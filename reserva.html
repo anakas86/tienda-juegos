@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Reservas Cafetería</title>
+        <meta charset="utf8"/>
+        <meta name="author" content="Ana Castillo"/>
+        <meta name="description" content="galería"/>
+        <meta name="keywords" content="flexbox" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
+        <meta name="robots" content="index,follow"/>
+        <link href="css/reserva.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header>
+            <div class="container-navigation">
+                <nav class="site-navigation">
+                    <a class="logo" href="home.html" title="enlace a la home">
+                        <img src="./img/gaming.png" alt="Logo de la tienda"/>
+                        <h1>Tienda de Juegos</h1>
+                    </a> 
+                    <input class="menu-input-main" type="checkbox" id="openMenu" />
+                    <label class="menu-label-main" for="openMenu" aria-label="Open Menu"></label>
+                    <ul class="menu-mobile">
+                        <li><a href="./tienda.html" title="Juegos">Juegos</a></li>
+                        <li><a href="./galeria.html" title="Nuestra tienda">Nuestra tienda</a></li>
+                        <li class="abrir-menu"><a href="#" title="contacto">Contacto</a>
+                            <input class="menu-input-desplegable" type="checkbox" id="openMenuContacto" />
+                            <label class="menu-label-desplegable" for="openMenuContacto" aria-label="Open Menu"></label>
+                            <ul class="desplegable">
+                                <li><a href="mailto:a@gmail.com" title="Mandar un coreo de contacto">Correo</a></li>
+                                <li><a href="www.facebook.com" title="Facebook">Facebook</a></li>
+                                <li><a href="www.twitter.com" title="twitter">Twitter</a></li>
+                            </ul>
+                        </li>
+                        <li class="abrir-menu"><a href="./landing-cafeteria.html" title="cafeteria">Cafetería</a>
+                            <input class="menu-input-desplegable" type="checkbox" id="openMenuCafeteria" />
+                            <label class="menu-label-desplegable" for="openMenuCafeteria" aria-label="Open Menu"></label>
+                            <ul class="desplegable">
+                                <li><a href="./reserva.html">Reserva</a></li>
+                                <li><a href="./carta.html">Carta</a></li>
+                            </ul> 
+                        </li>
+                        <li><a href="blog.html" title="Blog">Blog</a>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="container">
+            <h2>Reserva tu mesa</h2>
+            <h3>¿Quieres venir a jugar mientras que tomas algo con tus amigos? ¿Quieres venir a comer algo de nuestra fantástica carta? No lo pienses más y reserva tu mesa</h3>
+            <form class="formulario-reserva" method="post">
+                <fieldset class="personal-information">
+                    <legend>Información personal</legend>
+                        <label for="Name">Nombre</label>
+                        <input type="text" id="Name" name="Name" required/>
+                        <label for="lastname">Apellido</label>
+                        <input type="text" id="lastname"  name="lastname" requiered/>
+                        <label for="email">Corre Electrónico</label>
+                        <input type="email" name="email" id="email" required/>
+                        <label for="phone">Teléfono</label>
+                        <input type="phone" name="phone" id="phone"/>
+                </fieldset>
+                <fieldset class="reservation-data">
+                    <legend>Datos de tu reserva</legend>
+                    <p>Cuando vengas ¿Qué quieres hacer?</p>
+                    <input type="radio" id="solo-comer" name="reserva" value="comer"/>
+                    <label for="solo-comer">Comer</label>
+                    <input type="radio" id="jugar-comer" name="reserva" value="comeryjugar"/>
+                    <label for="jugar-comer">Comer y Jugar</label>
+                    
+                    <label for="date">¿Cuándo?</label>
+                    <input type="datetime-local" id="date" name="fecha"/>
+                    <label for="person">¿Cuántas personas seréis?</label>
+                    <input type="number" id="person" name="personas"/>
+                     <label for="comments">Comentarios</label>
+                <textarea id="comments" name="comments"></textarea>
+                </fieldset>
+                <fieldset class="account">
+                    <legend>Crea tu cuenta</legend>
+                    <p>Crea tu cuenta en nuestra web y disfruta de exclusivas ventajas</p>
+                    <label for="email-cuenta">Corre Electrónico</label>
+                    <input type="email" name="email" id="email-cuenta"/>
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" minlength="8"/> 
+                </fieldset>
+                <input class="checkbox" type="checkbox" id="tyc" name="tyc" value="terminosycondiciones" required/>
+                <label for="tyc">Acepto los términos y condiciones</label>
+                <input type="submit" value="Enviar"/>
+                <input type="reset"/>
+            </form>
+        </main>
+        <footer>
+            <div class="footer-main">
+                <a href="mailto:a@gmail.com" title="Mandar un coreo de contacto">Escríbenos un correo</a>
+                <a href="formulario.html" title="Formulario de contacto">¿Quieres trabajar con nosotros?</a>
+                <a href="tel:655454543" title="Llámanos">Llámanos</a>
+                <a href="faqs.html" title="Preguntas Frecuentes">FAQS</a>
+            </div>
+        </footer>
+    </body>
+</html>

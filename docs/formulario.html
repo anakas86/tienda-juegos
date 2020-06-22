@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Ejercicio 10</title>
+        <meta charset="utf-8"/>
+        <meta name="author" content="Ana Castillo"/>
+        <meta name="description" content="ejercicio, formulario"/>
+        <meta name="keywords" content="formulario" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
+        <meta name="robots" content="index,follow"/>
+        <link href="./css/formulario.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header>
+            <div class="container-navigation">
+                <nav class="site-navigation">
+                    <a class="logo" href="home.html" title="enlace a la home">
+                        <img src="./img/gaming.png" alt="Logo de la tienda"/>
+                        <h1>Tienda de Juegos</h1>
+                    </a> 
+                    <input class="menu-input-main" type="checkbox" id="openMenu" />
+                    <label class="menu-label-main" for="openMenu" aria-label="Open Menu"></label>
+                    <ul class="menu-mobile">
+                        <li><a href="./tienda.html" title="Juegos">Juegos</a></li>
+                        <li><a href="./galeria.html" title="Nuestra tienda">Nuestra tienda</a></li>
+                        <li class="abrir-menu"><a href="#" title="contacto">Contacto</a>
+                            <input class="menu-input-desplegable" type="checkbox" id="openMenuContacto" />
+                            <label class="menu-label-desplegable" for="openMenuContacto" aria-label="Open Menu"></label>
+                            <ul class="desplegable">
+                                <li><a href="mailto:a@gmail.com" title="Mandar un coreo de contacto">Correo</a></li>
+                                <li><a href="www.facebook.com" title="Facebook">Facebook</a></li>
+                                <li><a href="www.twitter.com" title="twitter">Twitter</a></li>
+                            </ul>
+                        </li>
+                        <li class="abrir-menu"><a href="./landing-cafeteria.html" title="cafeteria">Cafetería</a>
+                            <input class="menu-input-desplegable" type="checkbox" id="openMenuCafeteria" />
+                            <label class="menu-label-desplegable" for="openMenuCafeteria" aria-label="Open Menu"></label>
+                            <ul class="desplegable">
+                                <li><a href="./reserva.html">Reserva</a></li>
+                                <li><a href="./carta.html">Carta</a></li>
+                            </ul> 
+                        </li>
+                        <li><a href="blog.html" title="Blog">Blog</a>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="container">
+            <h2>¿Quieres trabajar con nosotros</h2>
+            <form class="formulario-contacto">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" class="nombre" required/><br/>
+                <label for="surnames">Apellidos</label>
+                <input type="text" id="surnames" class="apellido"/><br/><br/>
+                <p>Nivel de Estudios</p>
+                <input id="basicos" type="checkbox" class="nivel de estudios" name="estudios"/>
+                <label for="basicos">Básicos</label><br/>
+                <input id="intermedios" type="checkbox" class="nivel de estudios" name="estudios"/>
+                <label for="intermedios">Intermedios</label><br/>
+                <input id="superiores" type="checkbox" class="nivel de estudios" name="estudios"/>
+                <label for="superiores">Superiores</label><br/><br/>
+                <p>Sexo</p>
+                <input id="mujer" type="radio" value="mujer" name="sexo"/>
+                <label for="mujer">Mujer</label>
+                <input id="hombre" type="radio" value="hombre" name="sexo"/>
+                <label for="hombre">Hombre</label><br/><br/>
+                <label for="no-rellenar">A rellenar por la empresa</label>
+                <input type="text" id="no-rellenar" class="no-rellenar" disabled readonly/><br/><br/>
+                <label for="contraseña">Contraseña</label>
+                <input type="password" id="contraseña" class="contraseña" required/><br/><br/>
+                <label for="conocimientos">Conocimientos previos</label>
+                <p contenteditable>Explica tus conocimientos previos</p>
+                <p>Política de privacidad</p>
+                <input id="Acepto" type="radio" value="Acepto" name="politica" class="politica" checked/>
+                <label for="Acepto">Acepto</label>
+                <input id="no-acepto" type="radio" value="No-acepto" name="politica" class="politica"/>
+                <label for="no-acepto">No acepto</label><br/><br/>
+                <input type="submit">
+            </form>
+        </main>
+        <footer>
+            <div class="footer-main">
+                <a href="mailto:a@gmail.com" title="Mandar un coreo de contacto">Escríbenos un correo</a>
+                <a href="formulario.html" title="Formulario de contacto">¿Quieres trabajar con nosotros?</a>
+                <a href="tel:655454543" title="Llámanos">Llámanos</a>
+                <a href="faqs.html" title="Preguntas Frecuentes">FAQS</a>
+            </div>
+        </footer>
+    </body>
+</html>

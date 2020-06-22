@@ -1,0 +1,47 @@
+@import url('main.css');
+
+.shop{
+    position: relative;
+    margin:1.5em;
+}
+.container img{
+    height:400px;
+    max-width: 500px;
+    display:block;
+}
+.shop .overlay{
+    background-color: rgba(250, 135, 100, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+.shop .overlay h2{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    margin: 0;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+.shop .overlay:hover{
+    opacity:1
+}
+@media all and (max-width: 1111px) {
+    .container img{
+        height:300px;
+        max-width: 400px;
+    }
+}
+@media all and (max-width: 910px) {
+    .container img{
+        height:auto;
+        max-width: 100%;
+    }
+}

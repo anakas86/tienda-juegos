@@ -1,0 +1,93 @@
+@import url('main.css');
+
+.one-card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    background-color: #ffffff;
+    padding: 2em 1.8em 2em;
+    margin:1.5em;
+    max-height: 400px;
+    border-radius: 3%;
+    box-shadow: 2px 2px 5px rgb(167, 166, 166);
+}
+
+.one-card .img-card{
+    height:50%;
+    text-align: center;
+} 
+
+.img-card img{
+    height: 100%;
+}
+
+.content-card{
+    display: flex;
+    flex-direction: column;
+}
+.content-card h2{
+    font-size:1.8rem;
+    font-weight: 100;
+    margin:0.5em 0 0;
+}
+
+.precio{
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: right;
+    margin:0;
+}
+.description{
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 1.2rem;
+    margin:0;
+}
+.caracteristicas{
+    font-size: 0.9rem;
+}
+.content-card button{
+    z-index: 0;
+    -webkit-appearance: none;
+    border: 0 solid;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color:white;
+    color: coral;
+    padding: 10px 20px;
+    width: 150px;
+    align-self: center;
+    cursor:pointer;
+    position: relative;
+    transition: color 1s ease;
+    overflow: hidden;
+}
+
+.content-card button:hover{
+    color:#ffffff;
+}
+
+.content-card button::before{
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 0;
+    background-color: coral;
+    border-radius: 10%;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: all 1s ease;   
+}
+
+.content-card button:hover::before{
+    opacity:1;
+    transform: translateX(-45px);
+}
+@media all and (max-width: 825px) {
+    .one-card{
+        max-width: 100%;
+    }
+}
