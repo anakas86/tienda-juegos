@@ -137,6 +137,7 @@
 }
 .presentation a{
     text-decoration: none;
+    color:coral;
 }
 .presentation a:visited{
     color:coral;
